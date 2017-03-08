@@ -1,0 +1,52 @@
+/*
+Theme Name: Thushan Research
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: Thushan Ganegedara
+Author URI: http://thushv.com
+Description: This is a theme for blogging research work
+Version: 1.0
+*/
+
+/*color scheme
+light to dark
+#92D3FF, #52BAFF, #2F6A92, #295D7F
+*/
+
+html, body, .container-fluid {
+	height:100%;	
+}
+
+#sidebar{
+	background:#295D7F;
+}
+
+#sidebar p{
+	font-family:'Lato', serif;
+	color:#eeeeee;
+}
+.sidebar-text{
+	font-size:1.2em;	
+}
+.sidebar-title{
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+#header{
+	height:20%;
+	display:block;
+}
+.post-title{
+	font-family:Vollkorn, sans-serif;
+	line-height:50px;
+}
+
+#container-primary{
+	height:80%;			
+}
+#profile-pic{
+	width:150px;
+	height:auto;
+	margin-top:-75px;
+}
+
