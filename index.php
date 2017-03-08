@@ -41,8 +41,7 @@
 
 	<div id="content" class="col-xl-9 col-lg-9 col-sm-12 col-xs-12">		
 			<?php get_search_form();?>
-			<br/>
-			<br/>
+			
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				 
 				<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
@@ -50,7 +49,7 @@
 			<?php endwhile; else: ?>
 				<h2>Woops...</h2>
 			 
-				<p>Sorry, no posts we're found.</p>
+				<p>Sorry, no posts found.</p>
 			 
 				<?php endif; ?>
 			
