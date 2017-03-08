@@ -36,9 +36,11 @@ html, body, .container-fluid {
 	height:20%;
 	display:block;
 }
+
 .post-title{
 	font-family:Vollkorn, sans-serif;
 	line-height:50px;
+	margin-left:17px;
 }
 
 #container-primary{
@@ -50,3 +52,38 @@ html, body, .container-fluid {
 	margin-top:-75px;
 }
 
+/* ==========================
+Search Form Style
+===========================*/ 
+.search-box{
+  margin: 10px;  
+  display:block;
+}
+
+.search-container{  
+  vertical-align: top;  
+  position: relative;  
+  white-space:nowrap;
+}
+
+.search-input{
+  width: 90%;  
+  background: #92D3FF;
+  border: none;
+  font-size: 1.5em;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.search-container .search-icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 3px;
+  z-index: 1;
+  color: #4f5b66;
+}

@@ -14,6 +14,9 @@
 <!-- Google web fonts -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn">
+<!-- Font awesome Icons -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 <?php wp_head(); ?>
 </head>
   
@@ -38,6 +41,8 @@
 
 	<div id="content" class="col-xl-9 col-lg-9 col-sm-12 col-xs-12">		
 			<?php get_search_form();?>
+			<br/>
+			<br/>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				 
 				<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
