@@ -19,9 +19,7 @@
 					<div class='sidebar-content-div'>
 					<p class="sidebar-title">Excel In:</p>
 					<p class="sidebar-text">Python, C++, Tensorflow/Theano/Caffe, CSS/HTML</p>
-					</div>
-					
-					
+					</div>										
 				</div>
 		</div>
 		</div>
@@ -41,10 +39,8 @@
 							</div>
 						
 					<?php endwhile; else: ?>
-						<h2>Woops...</h2>
-					 
-						<p>Sorry, no posts found.</p>
-					 
+						<h2>Woops...</h2>					 
+						<p>Sorry, no posts found.</p>					 
 						<?php endif; ?>			
 					<br/><br/> <!-- this is to get some space between the last post item and the shaddow -->
 				</div>

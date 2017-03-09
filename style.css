@@ -43,11 +43,6 @@ body{
 	display:block;	
 }
 
-.navbar{
-	box-shadow: 4px 4px 6px #888888;
-	z-index:1500;
-}
-
 #profile-pic{
 	width:150px;
 	height:auto;
@@ -102,6 +97,16 @@ Post Display (Loop)
 .post-title{
 	margin-top:-40px;
 	font-family:Vollkorn, sans-serif;				
+	
+}
+
+.post-div a{
+	color:#295D7F !important;
+}
+.post-div a:hover{
+	color:#FF4500 !important;
+	text-decoration:none !important;
+	transition: color 0.5s ease;
 }
 
 .post-cat{
@@ -133,6 +138,8 @@ Navigation Menu
 }
 .navbar{
 	background:#295D7F;	
+	box-shadow: 4px 4px 6px #888888;
+	z-index:1500;
 }
 
 /* ==========================
@@ -161,7 +168,7 @@ Search Form Style
   font-size: 1.5em;
   float: left;
   color: #63717f;
-  padding-left: 50px;
+  padding-left: 70px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -172,7 +179,7 @@ Search Form Style
   position: absolute;  
   top: 50%;
   margin-left: -94%;
-  margin-top: -15px;
+  margin-top: -18px;
   z-index: 1;
   color: #4f5b66;
 }

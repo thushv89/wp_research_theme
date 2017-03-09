@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container-post">
+<div class="container-post jumbotron">
 <div class="container-post-inner">
 <?php while (have_posts()):the_post();?>
 <h2  class="single-post-title"><?php the_title();?></h2>
