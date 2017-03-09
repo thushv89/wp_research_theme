@@ -5,41 +5,51 @@
 	<div id="container" class='container-fluid'>
 
 	<div id="container-primary" class='row'>	
-		<div id="sidebar" class="col-xl-3 col-lg-3 col-sm-3 col-xs-3">				
+		<div id="container-sidebar" class="col-xl-3 col-lg-3 col-sm-3 col-xs-3">				
+		<div id="sidebar">
 				<img id="header-overflow" src="<?php echo get_template_directory_uri()."/images/header-overflow.png";?>" alt="header background">
 				<img id="profile-pic" src="<?php echo get_template_directory_uri()."/images/profile-pic.png";?>" alt="Profile Picture">
 				<br/>
 				<div id='sidebar-content-text'>
+					<div class='sidebar-content-div'>
 					<p class="sidebar-title">Thushan Ganegedara</p>			
+					</div>
+					<div class='sidebar-content-div'>
 					<p class="sidebar-title">What am I?</p>
 					<p class="sidebar-text">Machine Learning & Robotics Extraordinaire</p>
 					<p class="sidebar-text">PhD Student, University of Sydney</p>
+					</div>
+					<div class='sidebar-content-div'>
 					<p class="sidebar-title">Excel In:</p>
 					<p class="sidebar-text">Python, C++, Tensorflow/Theano/Caffe, CSS/HTML</p>
-					<br/>
-					<br/>
+					</div>
+					
 					
 				</div>
+		</div>
 		</div>
 	
 		<div id="container-secondary" class="col-xl-9 col-lg-9 col-sm-9 col-xs-9">						
 					
-			<div id="content" class="row">						
-				<?php get_search_form();?>
-				
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<div class=post-div> 
-					<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title();?></a> : <span class="post-cat"><?php the_category(', ');?></span></h3>
-					</div>					
+			<div id="container-content" class="row">						
+				<div id="content">
+					<?php get_search_form();?>
 					
-					<?php get_template_part('blog-post-title', 'post');?>
-					
-				<?php endwhile; else: ?>
-					<h2>Woops...</h2>
-				 
-					<p>Sorry, no posts found.</p>
-				 
-					<?php endif; ?>				
+					<?php if ( have_posts() ) : 
+						while ( have_posts() ) : 
+							the_post(); ?>
+							<div class="post-div"> 
+								<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title();?></a></h3>					
+								<p class="post-cat"><?php the_category(', ');?></p>
+							</div>
+						
+					<?php endwhile; else: ?>
+						<h2>Woops...</h2>
+					 
+						<p>Sorry, no posts found.</p>
+					 
+						<?php endif; ?>				
+				</div>
 			</div>
 		</div>
 	</div>
