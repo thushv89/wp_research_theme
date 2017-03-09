@@ -36,8 +36,8 @@
 						while ( have_posts() ) : 
 							the_post(); ?>
 							<div class="post-div"> 
-								<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title();?></a></h3>					
-								<p class="post-cat">Categories: <?php the_category(', ');?></p>
+								<div class="post-title"><h3><a href="<?php the_permalink() ?>"><?php the_title();?></a></h3></div>
+								<div class="post-cat">Categories: <?php the_category(', ');?></div>
 							</div>
 						
 					<?php endwhile; else: ?>
@@ -45,7 +45,8 @@
 					 
 						<p>Sorry, no posts found.</p>
 					 
-						<?php endif; ?>				
+						<?php endif; ?>			
+					<br/><br/> <!-- this is to get some space between the last post item and the shaddow -->
 				</div>
 			</div>
 		</div>
