@@ -18,33 +18,36 @@
 
 <!-- Font awesome Icons -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!--Prints head info on the front end -->
+<?php wp_head(); ?> 
 </head>
 <body>
 	
-  <!--Prints head info on the front end -->
-<?php wp_head(); ?> 
-	<div id="container-header">
-		<nav class="navbar navbar-toggleable-md narbar-light" role="navigation"> 
-			<!-- For mobile devices toggle button appears showing menu items --> 
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"><i class="fa fa-list fa-inverse fa-lg"></i></span>
-			</button>
-			<a class="navbar-brand" href="<?php bloginfo('url')?>"><span id="brand-icon"><img src="<?php echo get_template_directory_uri()?>/images/logo.png" width="35px" height="35px" alt=""></span></a> 
-			
-			<!-- Collect the nav links, forms, and other content for toggling --> 
-			<div class="collapse navbar-collapse" id='navbar-nav'> 
-				<?php /* Primary navigation */
-				wp_nav_menu( array(
-				  'menu' => 'primary',
-				  'theme_location' => 'primary',
-				  'depth' => 2,
-				  'container' => false,
-				  'menu_class' => 'nav navbar-nav',
-				  //Process nav menu using our custom nav walker
-				  'walker' => new wp_bootstrap_navwalker())
-				);
-			?>
-			</div>
-		</nav>
-	</div>
+	<div id="container" class='container-fluid'>
+	
+		<div id="container-header" class="row">
+			<nav class="navbar navbar-toggleable-md narbar-light" role="navigation"> 
+				<!-- For mobile devices toggle button appears showing menu items --> 
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"><i class="fa fa-list fa-inverse fa-lg"></i></span>
+				</button>
+				<a class="navbar-brand" href="<?php bloginfo('url')?>"><span id="brand-icon"><img src="<?php echo get_template_directory_uri()?>/images/logo.png" width="35px" height="35px" alt=""></span></a> 
+				
+				<!-- Collect the nav links, forms, and other content for toggling --> 
+				<div class="collapse navbar-collapse" id='navbar-nav'> 
+					<?php /* Primary navigation */
+					wp_nav_menu( array(
+					  'menu' => 'primary',
+					  'theme_location' => 'primary',
+					  'depth' => 2,
+					  'container' => false,
+					  'menu_class' => 'nav navbar-nav',
+					  //Process nav menu using our custom nav walker
+					  'walker' => new wp_bootstrap_navwalker())
+					);
+				?>
+				</div>
+			</nav>
+		</div>
 

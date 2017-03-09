@@ -42,8 +42,7 @@ html, body{
 	color:#eeeeee;
 }
 
-.sidebar-text{
-	
+.sidebar-text{	
 	font-size:1.2em;	
 }
 
@@ -138,6 +137,7 @@ Search Form Style
   width:100%;
   height:80px;
   margin: 10px;    
+  margin-top:50px;
 }
 
 .search-container{  
@@ -170,4 +170,31 @@ Search Form Style
   margin-top: -15px;
   z-index: 1;
   color: #4f5b66;
+}
+
+/*=============================
+single.php styling
+==============================*/
+.container-post{
+	width:90%;
+	margin:auto;
+	border: 2px solid #888888;
+	box-shadow: 4px 4px 6px #888888;
+}
+
+.container-post-inner{
+	width:90%;
+	margin:auto;	
+	padding-top:50px;
+}
+
+.container-post-inner p{
+	font-family:Vollkorn, sans-serif;	
+	font-size:1.5em;
+	line-height:2em;
+}
+
+.single-post-title{
+	font-family:Lato, sans-serif;	
+	font-size:2em;
 }

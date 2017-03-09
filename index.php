@@ -1,8 +1,5 @@
 
-<?php get_header();?>
-
-
-	<div id="container" class='container-fluid'>
+<?php get_header();?>	
 
 	<div id="container-primary" class='row'>	
 		<div id="container-sidebar" class="col-xl-3 col-lg-3 col-sm-3 col-xs-3">				
@@ -40,7 +37,7 @@
 							the_post(); ?>
 							<div class="post-div"> 
 								<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title();?></a></h3>					
-								<p class="post-cat"><?php the_category(', ');?></p>
+								<p class="post-cat">Categories: <?php the_category(', ');?></p>
 							</div>
 						
 					<?php endwhile; else: ?>
@@ -53,9 +50,9 @@
 			</div>
 		</div>
 	</div>
-	
-	
-</div>
+		
+</div> <!-- div id=container -->
+
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
