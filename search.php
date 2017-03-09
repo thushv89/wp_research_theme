@@ -6,17 +6,18 @@ $results_count = $wp_query->found_posts;
 
 <div class="jumbotron">
     <div class="container-search-summary">
-        <h1>Search <span class="keyword">&ldquo;<?php the_search_query(); ?>&rdquo;</span></h1>
-        <?php if ($results_count == '' || $results_count == 0) { // No Results ?>
-            <p><span class="search-title label label-danger"><?php _e('No Results'); ?></span>&nbsp; <?php _e('Try different search terms.'); ?></p>
-        <?php } else { // Results Found ?>
-            <p><span class="search-title label label-success"><?php echo $results_count . __(' Results Found'); ?></span></p>
-        <?php } // end results check ?>
-        <div class="row">
+		<div class="row">
             <div class="col-md-12">
                 <?php get_search_form(); ?>
             </div>
         </div>
+		
+        <h1>Search Results For: <span class="keyword">&ldquo;<?php the_search_query(); ?>&rdquo;</span></h1>
+        <?php if ($results_count == '' || $results_count == 0) { // No Results ?>
+            <p><span class="search-title label label-danger"><?php _e('No Results'); ?></span>&nbsp; <?php _e('Try different search terms.'); ?></p>
+        <?php } else { // Results Found ?>
+            <p><span class="search-title label label-success"><?php echo $results_count . __(' Results Found'); ?></span></p>
+        <?php } // end results check ?>        
     </div> <!-- .container -->
 
 	<div class="container-search-content" id="main">
@@ -24,7 +25,7 @@ $results_count = $wp_query->found_posts;
 			<div class="col-md-8">
 				<?php if (have_posts()) : // Results Found ?>
 
-					<h1><?php _e('Search Results'); ?></h1><br/>
+					<!--h1><?php _e('Search Results'); ?></h1--><br/>
 					<?php while (have_posts()) : the_post(); ?>
 
 					<article <?php post_class(); ?>>

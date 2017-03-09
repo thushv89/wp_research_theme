@@ -14,17 +14,18 @@ light to dark
 
 body{
 	min-height:100%;
+	background-image:url("/images/background.jpg") no-repeat;
+	background-attachment:fixed;
 }
 
 .container-fluid {
 	min-height:90%;
 	display:block;
 }
-.container-primary, .container-secondary {
-	/*height:100%;	*/
-	display:block;
-}
 
+#container-secondary{
+	background-color:#eeeeee;
+}
 #content{
 	width:98%;
 	box-shadow: 2px 2px 3px #888888;
@@ -209,4 +210,24 @@ Styling for single.php
 .single-post-title{
 	font-family:Lato, sans-serif;	
 	font-size:2em;
+}
+
+.container-post-content{
+	white-space:pre-wrap;
+}
+
+/* ===============================
+Comments section
+=============================== */
+.container-comments{
+	width:90%;
+	margin:auto;
+	border: 2px solid #eeeeee;
+	box-shadow: 4px 4px 6px #888888;
+}
+
+.container-comments-inner{
+	width:90%;
+	margin:auto;
+
 }

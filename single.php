@@ -7,8 +7,13 @@
 
 <p class="blog-post-meta"><a href="#"><?php the_date(); ?></a> by <?php the_author();?></p>
 <hr/>
+<div class="container-post-content">
 <?php the_content();?>
+</div>
 <?php endwhile; ?>
 <hr/>
 </div> <!-- container-post -->
 </div> <!-- container-post-inner -->
+
+<div><?php comments_template(); ?></div>
+</div> <!-- container-fluid -->
