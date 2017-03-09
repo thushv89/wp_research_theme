@@ -55,11 +55,6 @@ html, body{
 	display:block;
 }
 
-.post-title{
-	font-family:Vollkorn, sans-serif;	
-	margin-left:17px;
-}
-
 #profile-pic{
 	width:150px;
 	height:auto;
@@ -73,11 +68,25 @@ html, body{
 	margin-right:-30px;
 }
 
+/* =========================
+Post Display (Loop)
+===========================*/
 .post-div{
 	margin-top:10px;
 	margin-bottom:10px;
 	border-bottom: 1px solid #ccc;
 }
+
+.post-title{
+	font-family:Vollkorn, sans-serif;	
+	margin-left:17px;
+}
+
+.post-cat{
+	font-family:Vollkorn, sans-serif;	
+	font-size:0.8em;
+}
+
 /* ==========================
 Navigation Menu
 ===========================*/

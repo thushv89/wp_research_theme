@@ -29,15 +29,17 @@
 				
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class=post-div> 
-					<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-					</div>
+					<h3><a class="post-title" href="<?php the_permalink() ?>"><?php the_title();?></a> : <span class="post-cat"><?php the_category(', ');?></span></h3>
+					</div>					
+					
+					<?php get_template_part('blog-post-title', 'post');?>
+					
 				<?php endwhile; else: ?>
 					<h2>Woops...</h2>
 				 
 					<p>Sorry, no posts found.</p>
 				 
-					<?php endif; ?>
-				
+					<?php endif; ?>				
 			</div>
 		</div>
 	</div>
