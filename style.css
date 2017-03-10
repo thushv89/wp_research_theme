@@ -118,26 +118,28 @@ Post Display (Loop)
 }
 
 /* ==========================
-Navigation Menu
+Main Navigation Menu
 ===========================*/
-.menu-item{
+#container-header  li[id^=menu-item]{
 	font-family:Lato, serif;
 	font-size:1.2em;
 	padding-left:30px;			
 }
-.menu-item a{
+#container-header li[id^=menu-item] a{
 	color:#eeeeee;
 	padding:5px 10px 5px 10px;	
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-.menu-item a:hover{
+#container-header li[id^=menu-item] a:hover{
 	background:#eeeeee;
+	color:#295D7F;	
 	text-decoration:none;
-	transition: background-color 0.5s ease;
+	transition: background 1s ease;
+	transition: color 1s ease;
 }
-.navbar{
+#container-header .navbar{
 	background:#295D7F;	
 	box-shadow: 4px 4px 6px #888888;
 	z-index:1500;
@@ -189,22 +191,22 @@ Search Form Style
 Styling for single.php 
 ==============================*/
 .container-post{
-	width:90%;
+	width:95%;
 	margin:auto;
 	border: 2px solid #eeeeee;
 	box-shadow: 4px 4px 6px #888888;
 }
 
 .container-post-inner{
-	width:90%;
+	width:95%;
 	margin:auto;	
-	padding-top:50px;
+	padding-top:50px;	
 }
 
 .container-post-inner p{
 	font-family:Vollkorn, sans-serif;	
-	font-size:1.5em;
-	line-height:2em;
+	font-size:1.2em;
+	/*line-height:1.5em;*/
 }
 
 .single-post-title{
@@ -230,4 +232,16 @@ Comments section
 	width:90%;
 	margin:auto;
 
+}
+
+/*=============================
+Post Content Navigation
+=============================*/
+
+.container-post-navbar nav{
+	top:100px;
+}
+
+.container-post-navbar .nav-item{
+	margin-bottom:20px;
 }
