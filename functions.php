@@ -79,3 +79,21 @@ function getTitlesWithTags($html, $tagnames) {
 	}	
 }*/
 ?>
+
+<?php function custom_comments($comment, $args, $depth){
+	//assigning global $comment to local $comment
+	$GLOBALS['comment'] = $comment; 
+	//comment class is a way of giving a unique class for comments for styling purposes?>
+	<?php if ($comment -> comment_approved=='1'): ?>		
+		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID();?>">	
+		<div id="comment-<?php comment_ID();?>" class="comment-div">		
+			<?php comment_text();?>
+			<div class="comment-author author-vcard">
+				<?php echo get_avatar($comment,$size='24'); ?>
+				<cite class="comment-author-text"><span><?php echo comment_author();?> said: </span></cite>
+			</div>
+		</div>
+		</li>
+	<?php endif; ?>
+	
+<?php }?>

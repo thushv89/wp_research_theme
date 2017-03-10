@@ -9,7 +9,8 @@ Version: 1.0
 
 /*color scheme
 light to dark
-#92D3FF, #52BAFF, #2F6A92, #295D7F
+#92D3FF, #52BAFF, #2F6A92, #295D7F & #eeeeee(Screen) #888888 (Shadow)(Old)
+
 */
 
 body{
@@ -23,21 +24,11 @@ body{
 	display:block;
 }
 
-#container-secondary{
-	background-color:#eeeeee;
-}
 #content{
 	width:98%;
+	background-color:#C5C1C0;
 	box-shadow: 2px 2px 3px #888888;
 }
-
-#sidebar{	
-	background:#295D7F;		
-	display:block;
-	overflow:hidden;		
-	box-shadow: 2px 2px 3px #888888;
-}
-
 
 #container-header{
 	height:10%;			
@@ -56,6 +47,13 @@ body{
 /* ========================
 Side Bar Styling
 ======================== */
+#sidebar{		
+	background:#1A2930;		
+	display:block;
+	overflow:hidden;		
+	box-shadow: 2px 2px 3px #888888;
+}
+
 #header-overflow{
 	width:120%;
 	/*margin-bottom:-50px;	*/
@@ -77,7 +75,7 @@ Side Bar Styling
 	font-weight:bold;
 }
 .sidebar-content-div{
-	border-bottom: 1px solid #2F6A92;
+	border-bottom: 1px solid #273d47;
 }
 #sidebar-content-text{
 	padding:10px;
@@ -102,10 +100,10 @@ Post Display (Loop)
 }
 
 .post-div a{
-	color:#295D7F !important;
+	color:#49274A !important;
 }
 .post-div a:hover{
-	color:#FF4500 !important;
+	color:#DF744A !important;
 	text-decoration:none !important;
 	transition: color 0.5s ease;
 }
@@ -133,14 +131,14 @@ Main Navigation Menu
 	border-radius: 5px;
 }
 #container-header li[id^=menu-item] a:hover{
-	background:#eeeeee;
-	color:#295D7F;	
+	background:#DF744A;
+	color:#192231;	
 	text-decoration:none;
 	transition: background 1s ease;
 	transition: color 1s ease;
 }
 #container-header .navbar{
-	background:#295D7F;	
+	background:#192231;	
 	box-shadow: 4px 4px 6px #888888;
 	z-index:1500;
 }
@@ -167,15 +165,15 @@ Search Form Style
 .search-container input.search-input{
   width: 95%;  
   height:60px;
-  background:#eeeeee /*#92D3FF;*/  
+  background-color:#eeeeee; /*#92D3FF;*/  
   font-size: 1.5em;
   float: left;
-  color: #63717f;
+  
   padding-left: 70px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  border: 2px solid #dddddd;  
+  border: 2px solid #C5C1C0;  
 }
 
 .search-container .search-icon{
@@ -198,7 +196,7 @@ Styling for single.php
 }
 
 .container-post-inner{
-	width:95%;
+	width:98%;
 	margin:auto;	
 	padding-top:50px;	
 }
@@ -218,22 +216,6 @@ Styling for single.php
 	white-space:pre-wrap;
 }
 
-/* ===============================
-Comments section
-=============================== */
-.container-comments{
-	width:90%;
-	margin:auto;
-	border: 2px solid #eeeeee;
-	box-shadow: 4px 4px 6px #888888;
-}
-
-.container-comments-inner{
-	width:90%;
-	margin:auto;
-
-}
-
 /*=============================
 Post Content Navigation
 =============================*/
@@ -243,5 +225,57 @@ Post Content Navigation
 }
 
 .container-post-navbar .nav-item{
+	margin-bottom:10px;
+}
+
+.container-post-navbar a{
+	font-size: 0.8em;
+}
+
+/* ===============================
+Comments section
+=============================== */
+.container-comments{
+	width:90%;
+	margin:auto;
+	/*border: 2px solid #eeeeee;
+	box-shadow: 4px 4px 6px #888888;*/
+}
+
+.container-comments-inner{
+	width:90%;
+	margin:auto;
+
+}
+
+.container-comments ul{
+	list-style:none;
+}
+
+div.comment-div{
+	display:block;	
+	overflow:auto;
+	padding-top:5px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #dddddd;
+}
+.author-vcard{
+	display:block;
+	float:right;
+}
+
+.comment-text{
+	display:block;
+}
+
+.container-comments-topic{	
+	color:#eeeeee;
+	height:60px;
+	background-color:#76323F;	
 	margin-bottom:20px;
+}
+.container-comments-topic h4{
+	padding-top:20px;
+	padding-left:100px;
+	font-weight:bold;
 }
