@@ -35,7 +35,11 @@ body{
 	display:block;	
 }
 
-#profile-pic{
+/* ========================
+Side Bar Styling (md,lg,xl)
+======================== */
+
+#container-sidebar-inner #profile-pic{
 	width:150px;
 	height:auto;
 	display:block;
@@ -44,41 +48,83 @@ body{
 	margin-right:auto;
 }
 
-/* ========================
-Side Bar Styling
-======================== */
-#sidebar{		
+#container-sidebar-inner{		
+	
 	background:#1A2930;		
 	display:block;
 	overflow:hidden;		
 	box-shadow: 2px 2px 3px #888888;
 }
 
-#header-overflow{
+#container-sidebar-inner #header-overflow{
 	width:120%;
 	/*margin-bottom:-50px;	*/
 	margin-left:-30px;
 	margin-right:-30px;
 }
 
-#sidebar p{
+#container-sidebar-inner p, #container-sidebar-small-inner p{
 	font-family:'Lato', serif;
 	color:#eeeeee;
 }
 
-.sidebar-text{	
+#container-sidebar-inner .sidebar-text{	
 	font-size:1.2em;	
 }
 
-.sidebar-title{
+#container-sidebar-inner .sidebar-title{
 	font-size:1.5em;
 	font-weight:bold;
 }
+
 .sidebar-content-div{
 	border-bottom: 1px solid #273d47;
 }
-#sidebar-content-text{
+#container-sidebar-inner #sidebar-content-text{
 	padding:10px;
+}
+
+/* ========================
+Side Bar Styling (xs sm)
+======================== */
+#container-sidebar-small-inner{
+	width:100%;
+	background:#1A2930;		
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#container-sidebar-small-inner #sidebar-pic-div{	
+	display:inline-block;	
+	line-height:250px;
+	
+}
+#container-sidebar-small-inner #sidebar-content-text{
+	display:inline-block;
+}
+#container-sidebar-small-inner #profile-pic{
+	width:inherit;		
+	max-width:150px;
+	height:auto;
+	vertical-align:middle;	
+}
+
+#container-sidebar-small-inner .sidebar-title{
+	font-size:1.0em;
+	font-weight:bold;
+}
+
+#container-sidebar-small-inner .sidebar-text{	
+	font-size:0.8em;	
+}
+
+#container-sidebar-small-inner .sidebar-content-div{
+	padding-top:10px;
 }
 
 /* =========================
@@ -86,7 +132,6 @@ Post Display (Loop)
 ===========================*/
 .post-div{
 	width:95%;
-	
 	margin-left:17px;
 	border-bottom: 1px solid #ccc;
 	display:block;
@@ -143,6 +188,9 @@ Main Navigation Menu
 	z-index:1500;
 }
 
+.navbar-toggler{
+	
+}
 /* ==========================
 Search Form Style
 ===========================*/ 
@@ -213,7 +261,11 @@ Styling for single.php
 }
 
 .container-post-content{
-	white-space:pre-wrap;
+	white-space:pre-wrap;	
+}
+
+.container-post-content-outer{
+	border-left:1px solid #dddddd;
 }
 
 /*=============================
@@ -222,6 +274,11 @@ Post Content Navigation
 
 .container-post-navbar nav{
 	top:100px;
+}
+
+.container-post-navbar h5{
+	padding-left:10px;
+	font-size:1em;
 }
 
 .container-post-navbar .nav-item{
@@ -253,6 +310,7 @@ Comments section
 }
 
 div.comment-div{
+	font-family:Vollkorn, sans-serif;
 	display:block;	
 	overflow:auto;
 	padding-top:5px;
@@ -273,6 +331,7 @@ div.comment-div{
 	height:60px;
 	background-color:#76323F;	
 	margin-bottom:20px;
+
 }
 .container-comments-topic h4{
 	padding-top:20px;

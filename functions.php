@@ -92,6 +92,9 @@ function getTitlesWithTags($html, $tagnames) {
 				<?php echo get_avatar($comment,$size='24'); ?>
 				<cite class="comment-author-text"><span><?php echo comment_author();?> said: </span></cite>
 			</div>
+			<div class="reply">
+			<?php echo comment_reply_link(array_merge($args,array('depth'=>$depth,'max_depth'=>$args['max_depth'],'reply_text'=>'Reply')));?>
+			</div>
 		</div>
 		</li>
 	<?php endif; ?>

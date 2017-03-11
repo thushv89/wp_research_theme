@@ -1,9 +1,31 @@
 
 <?php get_header();?>	
 
+		<div id="container-sidebar-small-inner" class="row hidden-md-up">
+			<!--img id="header-overflow" src="<?php echo get_template_directory_uri()."/images/header-overflow.png";?>" alt="header background"-->
+			<div id="sidebar-pic-div" class="col-3 col-sm-3">
+				<img id="profile-pic" src="<?php echo get_template_directory_uri()."/images/profile-pic.png";?>" alt="Profile Picture">
+			</div>
+			<div id='sidebar-content-text' class="col-9 col-sm-9">
+				<div class='sidebar-content-div'>
+				<p class="sidebar-title">Thushan Ganegedara</p>			
+				</div>
+				<div class='sidebar-content-div'>
+				<p class="sidebar-title">What am I?</p>
+				<p class="sidebar-text">Machine Learning & Robotics Extraordinaire</p>
+				<p class="sidebar-text">PhD Student, University of Sydney</p>
+				</div>
+				<div class='sidebar-content-div'>
+				<p class="sidebar-title">Excel In:</p>
+				<p class="sidebar-text">Python, C++, Tensorflow/Theano/Caffe, CSS/HTML</p>
+				</div>										
+			</div>
+		</div>
+	
+	
 	<div id="container-primary" class='row'>	
-		<div id="container-sidebar" class="col-xl-3 col-lg-3 col-sm-3 col-xs-3">				
-		<div id="sidebar">
+		<div id="container-sidebar-outer" class="hidden-sm-down col-md-3 col-lg-3 col-xl-3">				
+		<div id="container-sidebar-inner">
 				<img id="header-overflow" src="<?php echo get_template_directory_uri()."/images/header-overflow.png";?>" alt="header background">
 				<img id="profile-pic" src="<?php echo get_template_directory_uri()."/images/profile-pic.png";?>" alt="Profile Picture">
 				<br/>
@@ -24,8 +46,7 @@
 		</div>
 		</div>
 	
-		<div id="container-secondary" class="col-xl-9 col-lg-9 col-sm-9 col-xs-9">						
-					
+		<div id="container-secondary" class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">		
 			<div id="container-content" class="row">						
 				<div id="content">
 					<?php get_search_form();?>
