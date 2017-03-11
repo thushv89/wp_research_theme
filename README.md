@@ -5,6 +5,13 @@ This a theme I deveoped for blogging research work. Key focuses for the look and
 <li>Responsiveness</li>
 </ol>
 
+<h2>Dependencies</h2>
+<ul>
+<li>Boostrap</li>
+<li>JQuery</li>
+<li>Google Fonts</li>
+</ul>
+
 <h2>Summary of v1.0</h2>
 Plan to achieve the following by the end of v1.0
 <ul>
