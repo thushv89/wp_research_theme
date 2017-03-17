@@ -75,4 +75,7 @@ $results_count = $wp_query->found_posts;
 			</div> <!-- .col-md-8 -->
 		</div> <!-- .row -->
 	</div> <!-- .jumbotron -->
-</div> <!-- #container -->
+	
+<?php
+get_footer();
+?>

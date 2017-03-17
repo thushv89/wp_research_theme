@@ -249,7 +249,7 @@ Styling for single.php
 	padding-top:50px;	
 }
 
-.container-post-inner p{
+.container-post-inner p, .container-post-inner li{
 	font-family:Vollkorn, sans-serif;	
 	font-size:1.2em;
 	/*line-height:1.5em;*/
@@ -268,9 +268,17 @@ Styling for single.php
 	border-left:1px solid #dddddd;
 }
 
+.related-posts-outer h3{
+	font-size:1.2em;
+	font-family:Vollkorn, sans-serif;	
+}
 /*=============================
 Post Content Navigation
 =============================*/
+
+.container-post-navbar{
+	/*where scrolling logic goes */
+}
 
 .container-post-navbar nav{
 	top:100px;
@@ -288,6 +296,8 @@ Post Content Navigation
 .container-post-navbar a{
 	font-size: 0.8em;
 }
+
+
 
 /* ===============================
 Comments section
@@ -337,4 +347,21 @@ div.comment-div{
 	padding-top:20px;
 	padding-left:100px;
 	font-weight:bold;
+}
+
+/*===================================
+Search Results Page
+===================================*/
+
+.container-search-content{
+	font-family:Vollkorn, sans-serif;
+}
+
+.container-search-content a{
+	color:#49274A !important;
+}
+.container-search-content a:hover{
+	color:#DF744A !important;
+	text-decoration:none !important;
+	transition: color 0.5s ease;
 }
