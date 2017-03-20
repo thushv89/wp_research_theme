@@ -2,11 +2,13 @@
 
 <div class="container-post jumbotron">
 	<div class="container-post-inner row">		
-		<div class="container-post-navbar col-md-3 hidden-sm-down">
-		
-		<nav class="navbar sticky-top flex-column" role="navigation">						
-			<!-- Collect the nav links, forms, and other content for toggling --> 		
-			<h5>Table of Content</h5>
+		<div class="container-post-navbar col-md-3 hidden-sm-down">		
+		<nav class="navbar sticky-top flex-column" role="navigation">	
+			<?php social_share_buttons();?>
+			<!-- Collect the nav links, forms, and other content for toggling --> 
+			<div class="card">
+			<h5 class="card-header">Table of Content</h5>
+			<div class="nav-item-group card-block">
 			<ul class="nav nav-pills sticky-top flex-column">
 				<?php 
 					while (have_posts()):
@@ -17,6 +19,8 @@
 					getTitlesWithTags($html,$tags);
 					?>	
 			</ul>
+			</div>
+			</div>
 		</nav>
 		</div>
 	
@@ -38,7 +42,6 @@
 				<?php endwhile; ?>
 				<hr/>
 			</div> <!-- container-post -->
-	
 			<div class="related-posts-outer">
 				<div class="related-posts-title">
 					<h2> You might also like </h2>
@@ -57,7 +60,7 @@
 						$tag_names[] = $individual_tag->name;
 						}										
 					
-					$args=array('posts_per_page'=>3, 'tag__in' => $tag_ids, 'orderby' => 'relevance');
+					$args=array('posts_per_page'=>5, 'tag__in' => $tag_ids, 'orderby' => 'relevance');
 					$related_post_query = new WP_Query($args);
 										
 					$related_post_count = 0;

@@ -118,31 +118,30 @@ function getTitlesWithTags($html, $tagnames) {
 	}
 }
 
-// this method gets the content and add divs between content 
-// so I can add post jumps
-/*function formatContentWithDivs($html, $titles){
-	// Create DOM from string
-	$dom = new DOMDocument;
-	$dom->loadHTML($html);
+function social_share_buttons(){
+	global $post;
 	
-	$k=0;
-	foreach($titles as $l=>$t){
-		wrapContentWithDiv($start_line,$to_line);
-			
-		$k=$k+1;
-	}
+	$post_url = urlencode(get_permalink()); //get url
+	$post_title = get_the_title();
+			  		 
+	$facebook_url = 'https://www.facebook.com/sharer/sharer.php?u='.$post_url;
+	$linkedin_url = 'https://www.linkedin.com/shareArticle?mini=true&url='.$post_url .'&amp;title='.$post_title;
+	$google_url = 'https://plus.google.com/share?url='.$post_url;
+	$twitter_url = 'https://twitter.com/intent/tweet?text='.$post_title.'&amp;url='.$post_url.'&amp;via=thushv';
+	$social_content = '<div class="card social-widget">';
+	$social_content .= '<h5 class="card-header">Share this post. It\'s easy!</h5>';
+	$social_content .= '<div class="card-block social-item-group">';
+	$social_content .= '<div class="social-item-group-inner">';
+	$social_content .= '<span class = "social-item"><a href="' . $facebook_url . '" target="_blank"><img src="' . get_template_directory_uri() . '/images/social/facebook_sm.png"/></a></span>';
+	$social_content .= '<span class = "social-item"><a href="' . $linkedin_url . '" target="_blank"><img src="' . get_template_directory_uri() . '/images/social/linkedin_sm.png"/></a></span>';
+	$social_content .= '<span class = "social-item"><a href="' . $google_url . '" target="_blank"><img src="' . get_template_directory_uri() . '/images/social/google_sm.png"/></a></span>';
+	$social_content .= '<span class = "social-item"><a href="' . $twitter_url . '" target="_blank"><img src="' . get_template_directory_uri() . '/images/social/twitter_sm.png"/></a></span>';
+	$social_content .= '</div>';
+	$social_content .= '</div>';
+	$social_content .= '</div>';
 	
-	function wrapContentWithDiv($node, $start_line,$to_line){
-		foreach($node -> childeNodes as $cnode){
-			
-		}
-	}
-	
-	// echo the titles in the order of the line number
-	foreach($titles as $l=>$t){
-		echo '<li class="nav-item">' .'<a>' . $t .'</a class="nav-link"></li>';
-	}	
-}*/
+	echo $social_content;
+}
 
 function custom_comments($comment, $args, $depth){
 	//assigning global $comment to local $comment

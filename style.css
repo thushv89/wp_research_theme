@@ -276,28 +276,73 @@ Styling for single.php
 Post Content Navigation
 =============================*/
 
-.container-post-navbar{
+.container-post-navbar .nav-item-group{
 	/*where scrolling logic goes */
+	height:400px;
+	overflow-y:scroll;
+}
+
+.nav-item-group ul{
+	position:relative;
 }
 
 .container-post-navbar nav{
-	top:100px;
+	top:40px;
 }
 
 .container-post-navbar h5{
 	padding-left:10px;
 	font-size:1em;
+	color:#eeeeee;
+	font-weight:bold;
+	background-color:#76323F; /*oxblood*/
 }
 
 .container-post-navbar .nav-item{
-	margin-bottom:10px;
+	margin-bottom:0px;
 }
 
 .container-post-navbar a{
 	font-size: 0.8em;
 }
 
+.container-post-navbar .card{	
+	margin-left:-20px;
+	margin-right:-20px;
+}
 
+.container-post-navbar .card-block{
+	margin-left:0px;
+	margin-right:0px;
+	background-color:#fafafa;	
+}
+
+/*====================================
+Social Item Styling
+====================================*/
+.social-widget{
+	display:block;
+	margin-bottom:20px;	
+	border-bottom: 1px solid #dddddd;	
+}
+.social-widget .card-header{
+	color:#eeeeee;
+	font-weight:bold;
+	background-color:#76323F; /*oxblood*/
+}
+.social-widget .card-block{
+	margin-left:0px;
+	margin-right:0px;
+	background-color:#fafafa;	
+}
+
+.social-item-group-inner{
+	display:block;	
+	margin:auto;	
+}
+.social-item{
+	padding-right:10px;
+}
 
 /* ===============================
 Comments section
@@ -312,7 +357,6 @@ Comments section
 .container-comments-inner{
 	width:90%;
 	margin:auto;
-
 }
 
 .container-comments ul{
@@ -364,4 +408,13 @@ Search Results Page
 	color:#DF744A !important;
 	text-decoration:none !important;
 	transition: color 0.5s ease;
+}
+
+/* ====================================
+Scroll bar
+==================================== */
+
+body::-webkit-scrollbar {
+width: 10px;
+height: 10px;
 }
