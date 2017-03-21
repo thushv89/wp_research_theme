@@ -411,10 +411,12 @@ Search Results Page
 }
 
 /* ====================================
-Scroll bar
+Pagination on index.php
 ==================================== */
+ul.pagination {
+	margin-top:20px;
+}
 
-body::-webkit-scrollbar {
-width: 10px;
-height: 10px;
+ul.pagination  .page-item a:hover{
+	text-decoration:none;
 }

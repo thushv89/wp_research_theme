@@ -59,13 +59,38 @@
 								<div class="post-cat">Categories: <?php the_category(', ');?></div>
 							</div>
 						
-					<?php endwhile; else: ?>
+					<?php endwhile;?> 
+					
+					<?php else: ?>
 						<h2>Woops...</h2>					 
 						<p>Sorry, no posts found.</p>					 
 						<?php endif; ?>			
-					<br/><br/> <!-- this is to get some space between the last post item and the shaddow -->
+					<br/> <!-- this is to get some space between the last post item and the shaddow -->
 				</div>
 			</div>
+			
+			<!-- Navigation logic uses bootstrap pagination !-->
+			<?php if ( have_posts() ) : ?>
+				<nav aria-label="Page navigation">				
+				  <ul class="pagination justify-content-center">
+					<?php $next_link = get_next_posts_link('Previous');
+					$previous_link = get_previous_posts_link('Next');					
+					if($next_link == ''):
+					?>						
+					<!-- If the next link is not available-->
+						<li class="page-item disabled"><span class="page-link"><a href="#" tabindex="-1">Previous</a></span></li>
+					<?php else: ?>
+					<!-- If the next link is available-->
+						<li class="page-item"><span class="page-link"><?php next_posts_link('Previous')?></span></li>
+					<?php endif;?>
+					<?php if($previous_link == ''):?>						
+						<li class="page-item disabled"><span class="page-link"><a href="#" tabindex="-1">Next</a></span></li>
+					<?php else: ?>
+						<li class="page-item"><span class="page-link"><?php previous_posts_link('Next')?></span></li>
+					<?php endif;?>
+				  </ul>
+				</nav>
+			<?php endif;?>
 		</div>
 	</div>	
 	
